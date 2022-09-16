@@ -1,0 +1,13 @@
+clc;
+clear all;
+close all;
+a=imread('rose.jpg');
+e=rgb2gray(a);
+b=edge(e,'canny');
+c=edge(e,'sobel');
+d=edge(e,'prewitt');
+sgtitle("Edge detection");
+subplot(2,2,1);imshow(a);title('Input image');
+subplot(2,2,2);imshow(b);title('Canny Method of edge detection');
+subplot(2,2,3);imshow(c);title('Sobel Method of edge detection');
+subplot(2,2,4);imshow(d);title('Prewitt Method of edge detection');

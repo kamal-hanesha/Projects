@@ -1,0 +1,11 @@
+clc;
+close all;
+clear all;
+im1=imread("hc.jpeg");
+ismooth=imgaussfilt(im1,3);
+isharp=imsharpen(im1);
+sgtitle("Image smoothening and sharpening");
+subplot(2,2,1);imshow(im1);title("original image");
+subplot(2,2,2);imshow(ismooth);title("Smoothened image");
+subplot(2,2,3);imshow(im1);title("original iamge");
+subplot(2,2,4);imshow(isharp);title("sharpened image");

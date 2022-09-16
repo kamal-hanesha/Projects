@@ -1,0 +1,13 @@
+clc;
+close all;
+clear all;
+im1=imread("lc.jpeg");
+im2=imread("mc.jpeg");
+im3=imread("hc.jpeg");
+sgtitle("Histograms of different contrast images");
+subplot(2,3,1);imshow(im1);title("low contrast image");
+subplot(2,3,2);imshow(im2);title("medium contrast image");
+subplot(2,3,3);imshow(im3);title("high contrast image");
+subplot(2,3,4);histogram(im1);title("histogram of low contrast image");
+subplot(2,3,5);histogram(im2);title("histogram of medium cotrast image");
+subplot(2,3,6);histogram(im3);title("histogram of high contrast image");

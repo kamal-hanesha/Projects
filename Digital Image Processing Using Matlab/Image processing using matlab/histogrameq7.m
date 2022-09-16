@@ -1,0 +1,10 @@
+clc;
+close all;
+clear all;
+im1=imread("lc.jpeg");
+J=histeq(im1);
+sgtitle("Histogram Equalisation");
+subplot(2,2,1);imshow(im1);title("low contrast image");
+subplot(2,2,2);histogram(im1);title("histogram of low contrast image");
+subplot(2,2,3);histogram(J);title("histogram equalisation of low contrast image");
+subplot(2,2,4);imshow(J);title("Converted image");
